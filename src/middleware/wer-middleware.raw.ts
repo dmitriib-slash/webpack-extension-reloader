@@ -67,7 +67,7 @@
       const { type, payload } = JSON.parse(data);
 
       if (type === SIGN_CHANGE && (!payload || !payload.onlyPageChanged)) {
-        tabs.query({ status: "complete" }).then(loadedTabs => {
+        tabs.query({ active: true, status: "complete" }).then(loadedTabs => {
           loadedTabs.forEach(
             tab => tab.id && tabs.sendMessage(tab.id, { type: SIGN_RELOAD }),
           );

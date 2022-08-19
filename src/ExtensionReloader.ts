@@ -105,10 +105,13 @@ export default class ExtensionReloaderImpl extends AbstractPluginReloader
       );
 
       if (contentOrBgChanged || onlyPageChanged) {
-        this._triggerer(onlyPageChanged)
-          .then(done)
-          .catch(done);
+      
       }
+  
+      // temporary available reload after any changes
+      this._triggerer(onlyPageChanged)
+        .then(done)
+        .catch(done);
     });
   }
 

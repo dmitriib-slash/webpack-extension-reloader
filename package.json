@@ -12,8 +12,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn test"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
@@ -25,10 +24,9 @@
   },
   "scripts": {
     "build": "SET NODE_ENV=production && webpack",
-    "test": "NODE_ENV=test webpack && mocha dist/tests.js",
-    "analyze": "NODE_ENV=production webpack --env.analyze",
-    "start:dev": "NODE_ENV=development webpack --watch",
-    "start:sample": "NODE_ENV=development webpack --config sample/webpack.plugin.js --watch",
+    "analyze": "SET NODE_ENV=production && webpack --env.analyze",
+    "start:dev": "SET NODE_ENV=development && webpack --watch",
+    "start:sample": "SET NODE_ENV=development && webpack --config sample/webpack.plugin.js --watch",
     "prepublishOnly": "yarn build",
     "lint": "tslint \"{src,client,typings,specs}/**/*.ts\" --fix --format codeFrame",
     "format": "prettier --write \"{src,client,typings,specs}/**/*.ts\"",

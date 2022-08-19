@@ -1,6 +1,6 @@
 {
-  "name": "webpack-extension-reloader",
-  "version": "1.1.4",
+  "name": "webpack-extension-reloader-with-assets",
+  "version": "1.1.6",
   "private": false,
   "description": "Watch for changes and force the reload of the browser extension",
   "main": "dist/webpack-extension-reloader.js",
@@ -8,7 +8,7 @@
   "types": "typings/webpack-extension-reloader.d.ts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rubenspgcavalcante/webpack-extension-reloader.git"
+    "url": "git://github.com/tishenko-d/webpack-extension-reloader.git"
   },
   "husky": {
     "hooks": {
@@ -24,7 +24,7 @@
     ]
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack",
+    "build": "SET NODE_ENV=production webpack",
     "test": "NODE_ENV=test webpack && mocha dist/tests.js",
     "analyze": "NODE_ENV=production webpack --env.analyze",
     "start:dev": "NODE_ENV=development webpack --watch",
@@ -38,9 +38,9 @@
   "author": "Rubens Pinheiro Gonçalves Cavalcante",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rubenspgcavalcante/webpack-extension-reloader/issues"
+    "url": "https://github.com/tishenko-d/webpack-extension-reloader/issues"
   },
-  "homepage": "https://github.com/rubenspgcavalcante/webpack-extension-reloader#readme",
+  "homepage": "https://github.com/tishenko-d/webpack-extension-reloader#readme",
   "keywords": [
     "webpack",
     "plugin",
